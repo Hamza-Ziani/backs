@@ -1,0 +1,29 @@
+<table width="400" cellspacing="0" cellpadding="0" style="border:1px solid #6b6f6f;font-family:Arial;margin:0 auto;color:#6b6f6f">
+   <tbody><tr align="center"><td style="padding-bottom: 15px;padding-left:25px;padding-right:25px;margin: 0;"><p>
+      <img src="https://i.imgur.com/jbEfcEq.png" style="padding-top:10px;height:81px;"></p>
+   <p style="font-size:22px;line-height:22px;margin-left:30px;margin-right:30px;    margin-bottom: 0px;">Récupération de votre mot de passe
+   </p>
+   <p style="font-size:14px">Bonjour xx#799__, <br></p>  
+   <p style="font-size:14px">Prière de trouver ci-dessous votre nouveau mot de passe :<br></p>  
+        <p style="font-size:14px;color: #021048;"> Mot de passe :  <span style="color:#6b6f6f;"> xx#748__</span>
+       </p><hr> 
+    
+          <p style="font-size:22px;line-height:22px;margin-left:30px;margin-right:30px;margin-top: 14px!important;margin: 0;">  
+                     Nous sommes là pour vous!<br>      
+      <img src="https://i.imgur.com/Arp7nFl.png" data-image-whitelisted="" class="CToWUd" style="
+       margin: 0;
+   "></p>                 <p style="font-size:14px">          
+           <a style="text-decoration:none;color: #021048;" href="#">Centre d'aide <span class="il">Documania</span></a><br>     
+            <a style="text-decoration:none;color:#007bff" href="mailto:contact@veviosys.ma" target="_blank">contact@<span class="il">veviosys</span>.ma</a><br>     
+         <a style="text-decoration:none;color:#007bff" href="#" target="_blank" data-saferedirecturl="#">www.<span class="il">documania</span>.ma</a><br> 
+               </p>     </td>     </tr> <tr> 
+   </tr>
+   <tr> 
+   <td align="center" bgcolor="#0c71a6" style="padding-bottom:15px;padding-left:25px;padding-right:25px;padding-top:15px;color:white">
+   <p style="font-size:12px">
+   <span class="il">Documania</span>
+        est la première plateforme intégrée de la digitalisation.
+   </p></td></tr>
+   <tr><td align="center" bgcolor="#EAE8EC" style="padding-bottom:15px;padding-left:25px;padding-right:25px;padding-top:15px;font-size:10px">
+   <p style="/* padding-top:25px */">Ce courriel vous a été envoyé afin de vous communiquer des informations relatives à la solution
+   <span class="il">Documania</span>. </p><p style="/* padding-top:25px */"><a href="#"><img src="https://i.imgur.com/Rs7zRFO.png" height="50" class="CToWUd"></a> </p><p style="/* padding-top:25px */"> ©Veviosys Inc., Tous droits réservés.</p></td> </tr></tbody></table>

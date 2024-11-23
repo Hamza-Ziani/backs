@@ -1,0 +1,14 @@
+{
+    "telemetry.machineId": "85f364fa49c41814718a08f68f0f8a73c90724721a53ec78a9b6dbfe55b96aa9",
+    "openedPathsList": {
+        "workspaces3": [
+            {
+                "id": "d40b82b37c3e3c4178842e4174476e87",
+                "configURIPath": "file:///r%3A/For%20Test/v-digit-backs/.metadata/codemix.code-workspace"
+            }
+        ],
+        "files2": []
+    },
+    "theme": "vs-dark",
+    "themeBackground": "#1e1e1e"
+}

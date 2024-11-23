@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="C:\Users\Hamouda Dev\Desktop\Documania-Courrier-Stagiaire\v-digit-backs"/>
+			<item value="C:\Users\pc\Documents\workSpace_ayoub\Work Application\documania-courrier-standard\v-digit-backs"/>
+			<item value="C:\Users\pc\Documents\workSpace_ayoub\Work Application\documania-courrier-standard"/>
+			<item value="R:\For Test\v-digit-backs"/>
+			<item value="R:\Documania courrier\v-digit-back"/>
+			<item value="C:\Users\Utilisateur\Desktop\Last\v-digit-project-master\v-digit-back"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+</section>

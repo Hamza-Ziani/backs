@@ -1,0 +1,90 @@
+<div align="center">
+    <table class="v1MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="600"
+        style="width: 450.0pt; border: solid #CCCCCC 1.0pt">
+        <tbody>
+            <tr>
+                <td style="border: none; background: #70BBD9; padding: 15.0pt 0cm 22.5pt 0cm">
+                    <p class="v1xmsonormal" align="center" style="text-align: center"><span style="color: black">
+                            <img width="720" height="172" style="width: 7.5in; height: 1.7916in" id="v1_x0000_i1025"
+                                src="https://www.acaps.ma/sites/all/themes/starter1/logo.png"
+                                alt="Creating Email Magic"></span><!-- o ignored --></p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td style="border: none; background: white; padding: 30.0pt 22.5pt 30.0pt 22.5pt">
+                    <table class="v1MsoNormalTable" border="0" cellspacing="0" cellpadding="0" width="100%"
+                        style="width: 100.0%">
+                        <tbody>
+                            <tr>
+                                <td style="padding: 0cm 0cm 0cm 0cm">
+                                    <p class="v1xmsonormal"><b>
+                                            <span
+                                                style="font-size: 18.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">Mail
+                                                de notification</span></b><!-- o ignored --></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 15.0pt 0cm 22.5pt 0cm">
+                                    <p style="line-height: 15.0pt"><span
+                                            style="font-size: 12.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">
+                                           <!-- <p style="font-size: 16.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643"> 
+                                            </p> -->
+                                            <!-- <p style="font-size:14px;color:#021048;align-text: start;text-align: start;backgound: #fff;background-color: #fff;border-left: solid #007BFF;padding: 5px;">Le document #docName#</p>   -->
+                                               
+                                            <p style="font-size: 12.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">  
+											   
+                                              <strong> xname#125 </strong>
+                                              
+                                               a abandonné coursier avec la référence <strong> xname#124 </strong>
+                                                <p style="font-size:12px;align-text: start;text-align: start;"> 
+                                            
+                                        </span><!-- o ignored --></p>
+                                    <p class="v1xmsonormal" style="font-size: 12.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">
+                                            <br>
+                                            
+											
+                                            Bien Cordialement.</span><!-- o ignored --></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 0cm 0cm 0cm 0cm">
+                                    <table class="v1MsoNormalTable" border="0" cellspacing="0" cellpadding="0"
+                                        width="100%" style="width: 100.0%">
+                                        <tbody>
+                                            <tr>
+                                                <td width="260" valign="top"
+                                                    style="width: 195.0pt; padding: 0cm 0cm 0cm 0cm">
+                                                    <p class="v1xmsonormal" style="line-height: 15.0pt"><b><span
+                                                                style="font-size: 12.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">Acaps
+                                                                - GCA</span></b><!-- o ignored --></p>
+                                                </td>
+                                                <td width="20" style="width: 15.0pt; padding: 0cm 0cm 0cm 0cm">
+                                                    <p class="v1xmsonormal" style="line-height: 0%"><span
+                                                            style="font-size: 1.0pt">&nbsp;</span><!-- o ignored --></p>
+                                                </td>
+                                                <td width="260" valign="top"
+                                                    style="width: 195.0pt; padding: 0cm 0cm 0cm 0cm">
+                                                    <p class="v1xmsonormal" align="right"
+                                                        style="text-align: right; line-height: 15.0pt"><b><span
+                                                                style="font-size: 12.0pt; font-family: &quot;Arial&quot;,sans-serif; color: #153643">#date#</span></b><!-- o ignored -->
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr>
+                <td style="border: none; background: #EE4C50; padding: 7.5pt 7.5pt 7.5pt 7.5pt">
+                    <p class="v1xmsonormal"><b><span
+                                style="font-size: 10.5pt; font-family: &quot;Arial&quot;,sans-serif; color: white">Copyright ACAPS #year#. Tous droits réservé.</span></b><!-- o ignored --></p>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,26 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch VDigitBackApplication",
+            "request": "launch",
+            "mainClass": "com.veviosys.vdigit.VDigitBackApplication",
+            "projectName": "v-digit-back"
+        },
+        {
+            "type": "aws-sam",
+            "request": "direct-invoke",
+            "name": "documania-courrier-cnops:com.veviosys.vdigit.VDigitBackApplication::main (java11)",
+            "invokeTarget": {
+                "target": "code",
+                "projectRoot": "${workspaceFolder}/",
+                "lambdaHandler": "com.veviosys.vdigit.VDigitBackApplication::main"
+            },
+            "lambda": {
+                "runtime": "java11",
+                "payload": {},
+                "environmentVariables": {}
+            }
+        }
+    ]
+}

@@ -1,0 +1,165 @@
+2024-11-23 09:46:03,929 INFO o.s.b.StartupInfoLogger [restartedMain] Starting VDigitBackApplication on DESKTOP-ISGLIU3 with PID 17684 (C:\Users\Hamouda Dev\Desktop\Documania-Courrier-Stagiaire\v-digit-backs\target\classes started by Hamouda Dev in C:\Users\Hamouda Dev\Desktop\Documania-Courrier-Stagiaire\v-digit-backs)
+2024-11-23 09:46:03,946 DEBUG o.s.b.StartupInfoLogger [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2024-11-23 09:46:03,948 INFO o.s.b.SpringApplication [restartedMain] No active profile set, falling back to default profiles: default
+2024-11-23 09:46:04,021 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\com\oracle\database\jdbc\ojdbc8\19.8.0.0\ojdbc8-19.8.0.0.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/com/oracle/database/jdbc/ojdbc8/19.8.0.0/oraclepki.jar
+2024-11-23 09:46:04,022 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\org\openoffice\juh\4.1.2\juh-4.1.2.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/juh/4.1.2/ridl.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/juh/4.1.2/jurt.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/lib/,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/juh/bin/
+2024-11-23 09:46:04,022 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\org\openoffice\jurt\4.1.2\jurt-4.1.2.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/jurt/4.1.2/ridl.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/jurt/4.1.2/unoloader.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/lib/,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/openoffice/jurt/bin/
+2024-11-23 09:46:04,023 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\org\glassfish\jaxb\jaxb-runtime\2.3.2\jaxb-runtime-2.3.2.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.xml.bind-api-2.3.2.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/txw2-2.3.2.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/istack-commons-runtime-3.0.8.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/stax-ex-1.8.1.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/FastInfoset-1.2.16.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/org/glassfish/jaxb/jaxb-runtime/2.3.2/jakarta.activation-api-1.2.1.jar
+2024-11-23 09:46:04,023 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\xalan\xalan\2.7.2\xalan-2.7.2.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/xalan/xalan/2.7.2/xercesImpl.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/xalan/xalan/2.7.2/xml-apis.jar,file:/C:/Users/Hamouda%20Dev/.m2/repository/xalan/xalan/2.7.2/serializer.jar
+2024-11-23 09:46:04,024 INFO o.s.b.l.DeferredLog [restartedMain] The Class-Path manifest attribute in C:\Users\Hamouda Dev\.m2\repository\xalan\serializer\2.7.2\serializer-2.7.2.jar referenced one or more files that do not exist: file:/C:/Users/Hamouda%20Dev/.m2/repository/xalan/serializer/2.7.2/xml-apis.jar
+2024-11-23 09:46:04,024 INFO o.s.b.l.DeferredLog [restartedMain] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-11-23 09:46:04,025 INFO o.s.b.l.DeferredLog [restartedMain] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-11-23 09:46:06,769 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-11-23 09:46:07,890 INFO o.s.d.r.c.RepositoryConfigurationDelegate [restartedMain] Finished Spring Data repository scanning in 1105ms. Found 73 JPA repository interfaces.
+2024-11-23 09:46:09,013 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration' of type [org.springframework.security.config.annotation.configuration.ObjectPostProcessorConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,025 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'objectPostProcessor' of type [org.springframework.security.config.annotation.configuration.AutowireBeanFactoryObjectPostProcessor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,035 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler@1b16349f' of type [org.springframework.security.access.expression.method.DefaultMethodSecurityExpressionHandler] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,043 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration' of type [org.springframework.security.config.annotation.method.configuration.GlobalMethodSecurityConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,062 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration' of type [org.springframework.security.config.annotation.method.configuration.Jsr250MetadataSourceConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,065 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'jsr250MethodSecurityMetadataSource' of type [org.springframework.security.access.annotation.Jsr250MethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:09,069 INFO o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker [restartedMain] Bean 'methodSecurityMetadataSource' of type [org.springframework.security.access.method.DelegatingMethodSecurityMetadataSource] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-11-23 09:46:10,356 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat initialized with port(s): 8089 (http)
+2024-11-23 09:46:10,376 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing ProtocolHandler ["http-nio-8089"]
+2024-11-23 09:46:10,380 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting service [Tomcat]
+2024-11-23 09:46:10,382 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting Servlet engine: [Apache Tomcat/9.0.33]
+2024-11-23 09:46:10,952 INFO o.a.j.l.DirectJDKLog [restartedMain] Initializing Spring embedded WebApplicationContext
+2024-11-23 09:46:10,954 INFO o.s.b.w.s.c.ServletWebServerApplicationContext [restartedMain] Root WebApplicationContext: initialization completed in 6928 ms
+2024-11-23 09:46:11,743 INFO o.h.j.i.u.LogHelper [restartedMain] HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-11-23 09:46:12,027 INFO o.h.Version [restartedMain] HHH000412: Hibernate ORM core version 5.4.12.Final
+2024-11-23 09:46:12,415 INFO o.h.a.c.r.j.JavaReflectionManager [restartedMain] HCANN000001: Hibernate Commons Annotations {5.1.0.Final}
+2024-11-23 09:46:13,291 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Starting...
+2024-11-23 09:46:14,305 INFO c.z.h.HikariDataSource [restartedMain] HikariPool-1 - Start completed.
+2024-11-23 09:46:14,356 INFO o.h.d.Dialect [restartedMain] HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2024-11-23 09:46:15,305 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.PermissionGroupPK
+2024-11-23 09:46:15,306 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.PermissionGroupPK
+2024-11-23 09:46:15,307 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.RecieveMessagePK
+2024-11-23 09:46:15,308 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.RecieveMessagePK
+2024-11-23 09:46:15,310 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.PermissionDocumentTypePK
+2024-11-23 09:46:15,311 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.PermissionDocumentTypePK
+2024-11-23 09:46:15,315 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.SearchAttributeValuePk
+2024-11-23 09:46:15,316 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.SearchAttributeValuePk
+2024-11-23 09:46:15,331 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.PermissionGroupPK
+2024-11-23 09:46:15,333 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.PermissionGroupPK
+2024-11-23 09:46:15,335 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.PermissionNatureCourrierPK
+2024-11-23 09:46:15,335 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.PermissionNatureCourrierPK
+2024-11-23 09:46:15,337 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.DocumentAttributeValuePK
+2024-11-23 09:46:15,338 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.DocumentAttributeValuePK
+2024-11-23 09:46:15,339 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.RecieveMessagePK
+2024-11-23 09:46:15,340 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.RecieveMessagePK
+2024-11-23 09:46:15,342 WARN o.h.m.RootClass [restartedMain] HHH000038: Composite-id class does not override equals(): com.veviosys.vdigit.models.pk.DocumentVesionAttributeValuePK
+2024-11-23 09:46:15,343 WARN o.h.m.RootClass [restartedMain] HHH000039: Composite-id class does not override hashCode(): com.veviosys.vdigit.models.pk.DocumentVesionAttributeValuePK
+2024-11-23 09:46:19,833 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [restartedMain] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2024-11-23 09:46:19,846 INFO o.s.o.j.AbstractEntityManagerFactoryBean [restartedMain] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-11-23 09:46:20,891 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [restartedMain] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-11-23 09:46:22,086 WARN o.a.j.l.DirectJDKLog [restartedMain] Cannot deserialize session attribute [SPRING_SECURITY_CONTEXT] for session [7BFF24FFFC454E82AA08D5BE559982BE]
+2024-11-23 09:46:22,093 ERROR o.a.j.l.DirectJDKLog [restartedMain] Exception loading sessions from persistent storage
+java.io.StreamCorruptedException: invalid type code: 00
+	at java.io.ObjectInputStream.readObject0(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.defaultReadFields(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.defaultReadObject(Unknown Source) ~[?:1.8.0_191]
+	at java.lang.Throwable.readObject(Unknown Source) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectStreamClass.invokeReadObject(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readSerialData(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readOrdinaryObject(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject0(Unknown Source) ~[?:1.8.0_191]
+	at java.io.ObjectInputStream.readObject(Unknown Source) ~[?:1.8.0_191]
+	at org.apache.catalina.session.StandardSession.doReadObject(StandardSession.java:1555) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.session.StandardSession.readObjectData(StandardSession.java:1049) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.session.StandardManager.doLoad(StandardManager.java:218) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.session.StandardManager.load(StandardManager.java:162) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.session.StandardManager.startInternal(StandardManager.java:354) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardContext.startInternal(StandardContext.java:5168) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_191]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source) [?:1.8.0_191]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardHost.startInternal(StandardHost.java:841) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1384) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.ContainerBase$StartChild.call(ContainerBase.java:1374) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.FutureTask.run(Unknown Source) [?:1.8.0_191]
+	at org.apache.tomcat.util.threads.InlineExecutorService.execute(InlineExecutorService.java:75) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.AbstractExecutorService.submit(Unknown Source) [?:1.8.0_191]
+	at org.apache.catalina.core.ContainerBase.startInternal(ContainerBase.java:909) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardEngine.startInternal(StandardEngine.java:262) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardService.startInternal(StandardService.java:421) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.core.StandardServer.startInternal(StandardServer.java:930) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.util.LifecycleBase.start(LifecycleBase.java:183) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.<init>(TomcatWebServer.java:88) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getTomcatWebServer(TomcatServletWebServerFactory.java:438) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactory.getWebServer(TomcatServletWebServerFactory.java:191) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:544) [spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) [spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+	at com.veviosys.vdigit.VDigitBackApplication.main(VDigitBackApplication.java:19) [classes/:?]
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_191]
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[?:1.8.0_191]
+	at java.lang.reflect.Method.invoke(Unknown Source) ~[?:1.8.0_191]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) [spring-boot-devtools-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+2024-11-23 09:46:22,111 DEBUG o.s.w.f.GenericFilterBean [restartedMain] Filter 'securityFilter' configured for use
+2024-11-23 09:46:22,112 DEBUG o.s.w.f.GenericFilterBean [restartedMain] Filter 'authFilter' configured for use
+2024-11-23 09:46:22,248 INFO o.s.b.d.a.OptionalLiveReloadServer [restartedMain] LiveReload server is running on port 35729
+2024-11-23 09:46:25,433 INFO o.q.i.StdSchedulerFactory [restartedMain] Using default implementation for ThreadExecutor
+2024-11-23 09:46:25,496 INFO o.q.c.SchedulerSignalerImpl [restartedMain] Initialized Scheduler Signaller of type: class org.quartz.core.SchedulerSignalerImpl
+2024-11-23 09:46:25,496 INFO o.q.c.QuartzScheduler [restartedMain] Quartz Scheduler v.2.3.2 created.
+2024-11-23 09:46:25,500 INFO o.q.s.RAMJobStore [restartedMain] RAMJobStore initialized.
+2024-11-23 09:46:25,503 INFO o.q.c.QuartzScheduler [restartedMain] Scheduler meta-data: Quartz Scheduler (v2.3.2) 'quartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'org.quartz.core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'org.quartz.simpl.SimpleThreadPool' - with 10 threads.
+  Using job-store 'org.quartz.simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2024-11-23 09:46:25,505 INFO o.q.i.StdSchedulerFactory [restartedMain] Quartz scheduler 'quartzScheduler' initialized from an externally provided properties instance.
+2024-11-23 09:46:25,507 INFO o.q.i.StdSchedulerFactory [restartedMain] Quartz scheduler version: 2.3.2
+2024-11-23 09:46:25,508 INFO o.q.c.QuartzScheduler [restartedMain] JobFactory set to: org.springframework.scheduling.quartz.SpringBeanJobFactory@9053f53
+2024-11-23 09:46:27,046 INFO o.s.a.f.CglibAopProxy [restartedMain] Unable to proxy interface-implementing method [public final void org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.afterPropertiesSet() throws java.lang.Exception] because it is marked as final: Consider using interface-based JDK proxies instead!
+2024-11-23 09:46:27,280 INFO o.s.s.w.DefaultSecurityFilterChain [restartedMain] Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@11662f59, org.springframework.security.web.context.SecurityContextPersistenceFilter@761ffca6, org.springframework.security.web.header.HeaderWriterFilter@7d9ebd0f, org.springframework.web.filter.CorsFilter@79ac8ff0, org.springframework.security.web.authentication.logout.LogoutFilter@40efc5de, org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter@7d2b3897, org.springframework.security.web.authentication.ui.DefaultLoginPageGeneratingFilter@2e1d0e14, org.springframework.security.web.authentication.ui.DefaultLogoutPageGeneratingFilter@4f225e09, org.springframework.security.web.session.ConcurrentSessionFilter@1bfb9340, com.veviosys.vdigit.configuration.AuthFilter@14b0bcb, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7ccac435, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4b29af98, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3129f9df, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@2177e05c, org.springframework.security.web.session.SessionManagementFilter@e2f4c70, org.springframework.security.web.access.ExceptionTranslationFilter@15b8de9, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@63b8190a]
+2024-11-23 09:46:27,678 INFO o.s.s.c.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'applicationTaskExecutor'
+2024-11-23 09:46:28,329 INFO o.s.l.c.s.AbstractContextSource [restartedMain] Property 'userDn' not set - anonymous context will be used for read-write operations
+2024-11-23 09:46:28,375 INFO o.s.s.c.ExecutorConfigurationSupport [restartedMain] Initializing ExecutorService 'taskScheduler'
+2024-11-23 09:46:29,258 INFO o.s.s.q.SchedulerFactoryBean [restartedMain] Starting Quartz Scheduler now
+2024-11-23 09:46:29,259 INFO o.q.c.QuartzScheduler [restartedMain] Scheduler quartzScheduler_$_NON_CLUSTERED started.
+2024-11-23 09:46:29,320 INFO o.a.j.l.DirectJDKLog [restartedMain] Starting ProtocolHandler ["http-nio-8089"]
+2024-11-23 09:46:29,398 INFO o.s.b.w.e.t.TomcatWebServer [restartedMain] Tomcat started on port(s): 8089 (http) with context path ''
+2024-11-23 09:46:29,410 INFO o.s.b.StartupInfoLogger [restartedMain] Started VDigitBackApplication in 26.513 seconds (JVM running for 29.713)
+2024-11-23 09:46:40,044 INFO o.a.j.l.DirectJDKLog [http-nio-8089-exec-10] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-11-23 09:46:40,044 INFO o.s.w.s.FrameworkServlet [http-nio-8089-exec-10] Initializing Servlet 'dispatcherServlet'
+2024-11-23 09:46:40,073 INFO o.s.w.s.FrameworkServlet [http-nio-8089-exec-10] Completed initialization in 28 ms
+2024-11-23 09:46:56,145 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-3] order by : desc
+2024-11-23 09:46:56,831 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-3] order by : desc
+2024-11-23 09:54:28,238 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-10] order by : desc
+2024-11-23 09:54:28,251 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-10] order by : desc
+2024-11-23 09:54:28,911 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-3] order by : desc
+2024-11-23 09:54:28,917 INFO c.v.v.s.SearchService$8 [http-nio-8089-exec-3] order by : desc
+2024-11-23 09:55:50,453 INFO o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin [RMI TCP Connection(18)-127.0.0.1] Application shutdown requested.
+2024-11-23 09:55:50,458 INFO o.q.c.QuartzScheduler [RMI TCP Connection(18)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-23 09:55:50,589 INFO o.s.s.c.ExecutorConfigurationSupport [RMI TCP Connection(18)-127.0.0.1] Shutting down ExecutorService 'taskScheduler'
+2024-11-23 09:55:50,591 INFO o.s.s.c.ExecutorConfigurationSupport [RMI TCP Connection(18)-127.0.0.1] Shutting down ExecutorService 'applicationTaskExecutor'
+2024-11-23 09:55:50,599 INFO o.s.s.q.SchedulerFactoryBean [RMI TCP Connection(18)-127.0.0.1] Shutting down Quartz Scheduler
+2024-11-23 09:55:50,599 INFO o.q.c.QuartzScheduler [RMI TCP Connection(18)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutting down.
+2024-11-23 09:55:50,599 INFO o.q.c.QuartzScheduler [RMI TCP Connection(18)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED paused.
+2024-11-23 09:55:50,600 INFO o.q.c.QuartzScheduler [RMI TCP Connection(18)-127.0.0.1] Scheduler quartzScheduler_$_NON_CLUSTERED shutdown complete.
+2024-11-23 09:55:50,624 INFO o.s.o.j.AbstractEntityManagerFactoryBean [RMI TCP Connection(18)-127.0.0.1] Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-11-23 09:55:50,634 INFO c.z.h.HikariDataSource [RMI TCP Connection(18)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2024-11-23 09:55:50,650 INFO c.z.h.HikariDataSource [RMI TCP Connection(18)-127.0.0.1] HikariPool-1 - Shutdown completed.

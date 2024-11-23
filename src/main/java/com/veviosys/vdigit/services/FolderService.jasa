@@ -1,0 +1,411 @@
+package com.veviosys.vdigit.services;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Objects;
+import java.util.UUID;
+
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Predicate;
+import javax.persistence.criteria.Root;
+
+import com.veviosys.vdigit.models.DocumentFolder;
+import com.veviosys.vdigit.models.Folder;
+import com.veviosys.vdigit.models.FolderType;
+import com.veviosys.vdigit.models.Groupe;
+import com.veviosys.vdigit.models.Journal;
+import com.veviosys.vdigit.models.Nature;
+import com.veviosys.vdigit.models.PermissionGroupN;
+import com.veviosys.vdigit.models.PermissionNatureCourrier;
+import com.veviosys.vdigit.models.User;
+import com.veviosys.vdigit.models.pk.FoldersRelationsPk;
+import com.veviosys.vdigit.repositories.DocumentFolderRepo;
+import com.veviosys.vdigit.repositories.FolderRepo;
+import com.veviosys.vdigit.repositories.FolderTypeRepo;
+import com.veviosys.vdigit.repositories.FoldersRelationsRepo;
+import com.veviosys.vdigit.repositories.GroupRepo;
+import com.veviosys.vdigit.repositories.JournalRepo;
+import com.veviosys.vdigit.repositories.PermissionGroupNRepo;
+import com.veviosys.vdigit.repositories.UserRepository;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.domain.Specification;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
+
+@Service
+public class FolderService {
+
+    @Autowired
+    private UserRepository userrepo;
+    @Autowired
+    private DocumentFolderRepo documentFolderRepo;
+    @Autowired
+    private FoldersRelationsRepo folderRelationsRepo;
+    @Autowired
+    private FolderRepo folderRepository;
+    @Autowired
+    FolderTypeRepo ftr;
+    @Autowired
+    private PermissionGroupNRepo pgnr;
+    @Autowired
+    private UserRepository ur;
+    @Autowired
+    private JournalRepo jr;
+    @Autowired
+    GroupRepo groupRepo;
+    @Value("${documania.datasource.select}")
+    private String selectedDb;
+
+    public List<Folder> getAllFolders() {
+        return folderRepository.findAll();
+    }
+
+    // GET MASTER OF CONNECTED USER
+    public User getMaster() {
+        return userrepo.getOne(connectedUserMaster(connectedUser().getUserId()));
+    }
+
+    // GET CONECTED USER
+    public User connectedUser() {
+        return ((CostumUserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal()).getUser();
+    }
+    // GET MASTER OF CONNECTED USER ID
+
+    public Long connectedUserMaster(Long userid) {
+        Long id;
+        id = userrepo.findUserMaster(userid);
+        if (id != null) {
+            return id;
+        }
+        return userid;
+    }
+
+    // RECENT FOLDER (1day)
+    public Page<Folder> getLastWeekFolders(Pageable pageable) {
+
+    	return folderRepository.findAll(new Specification<Folder>() {
+
+			@Override
+			public Predicate toPredicate(Root<Folder> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+				    String datedif = "datediffinvers";
+                if (selectedDb.equals("msql")) {
+                    datedif = "datediff";
+                }
+            
+                Predicate p = criteriaBuilder.conjunction();
+				User mst = getMaster();
+				p = criteriaBuilder.equal(root.get("master"), mst); 
+				System.out.println("hello before");
+				p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(
+						criteriaBuilder.function(datedif, Integer.class, criteriaBuilder.literal(new Date()), 
+								criteriaBuilder.literal(root.get("creation_date"))), 1));
+				System.out.println("hello after");
+				
+                User user = connectedUser();
+                if (user.getMaster() != null) {
+                    List<Groupe> groups = groupRepo.findGroupeByUsersUserId(user.getUserId());
+                    List<Long> acces = new ArrayList<Long>();
+                    for (Groupe groupe : groups) {
+
+                        List<PermissionGroupN> permissionGroups = pgnr.findByGroup(groupe);
+                        for (PermissionGroupN pd : permissionGroups) {
+
+                            for (PermissionNatureCourrier pdt : pd.getPermissionCourrier().getPermissionNature()) {
+
+                                if (pdt.getPermissionCourrier().getAcces().equals("R")
+                                        || pdt.getPermissionCourrier().getAcces().equals("RWD")
+                                        || pdt.getPermissionCourrier().getAcces().equals("RW")
+
+                                                && connectedUser().getMaster() != null) {
+                                    acces.add(pdt.getNature().getId());
+                                }
+                            }
+                        }
+
+                    }
+                    p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                        criteriaBuilder.literal(new Date()), root.get("creation_date")), 1));
+
+                }
+           //  p=criteriaBuilder.and(criteriaBuilder.equal(root.get("master"), connectedUserMaster(user.getUserId())));
+                // predicates.add(criteriaBuilder.equal(root.get("foldertype"), y));
+               p= criteriaBuilder.and(criteriaBuilder.equal(root.get("type").get("premierNiveau"), 1));
+                return p;
+            }
+        }, pageable);
+    }
+    // RECENT FOLDER (3days)
+
+    public Page<Folder> getLastMonthFolders(Pageable pageable) {
+	        return folderRepository.findAll(new Specification<Folder>() {
+	
+	            @Override
+	            public Predicate toPredicate(Root<Folder> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+                String datedif = "datediffinvers";
+                if (selectedDb.equals("msql")) {
+                    datedif = "datediff";
+                }
+                 
+                Predicate p = criteriaBuilder.conjunction();
+       				User mst = getMaster();
+       				p = criteriaBuilder.equal(root.get("master"), mst);
+       				p=criteriaBuilder.and(criteriaBuilder.greaterThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                            criteriaBuilder.literal(new Date()), root.get("creation_date")), 2));
+       				p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                            criteriaBuilder.literal(new Date()), root.get("creation_date")), 3));
+                       User user = connectedUser();
+                       if (user.getMaster() != null) {
+                           List<Groupe> groups = groupRepo.findGroupeByUsersUserId(user.getUserId());
+                           List<Long> acces = new ArrayList<Long>();
+                           for (Groupe groupe : groups) {
+
+                               List<PermissionGroupN> permissionGroups = pgnr.findByGroup(groupe);
+                               for (PermissionGroupN pd : permissionGroups) {
+
+                                   for (PermissionNatureCourrier pdt : pd.getPermissionCourrier().getPermissionNature()) {
+
+                                       if (pdt.getPermissionCourrier().getAcces().equals("R")
+                                               || pdt.getPermissionCourrier().getAcces().equals("RWD")
+                                               || pdt.getPermissionCourrier().getAcces().equals("RW")
+
+                                                       && connectedUser().getMaster() != null) {
+                                           acces.add(pdt.getNature().getId());
+                                       }
+                                   }
+                               }
+
+                           }
+                           p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                               criteriaBuilder.literal(new Date()), root.get("creation_date")), 1));
+
+                       }
+                 
+                      p= criteriaBuilder.and(criteriaBuilder.equal(root.get("type").get("premierNiveau"), 1));
+                       return p;
+            }
+        }, pageable);
+    }
+    // RECENT FOLDER (1week)
+
+    public Page<Folder> getOLDFolders(Pageable pageable) {
+        return folderRepository.findAll(new Specification<Folder>() {
+
+            @Override
+            public Predicate toPredicate(Root<Folder> root, CriteriaQuery<?> query, CriteriaBuilder criteriaBuilder) {
+                String datedif = "datediffinvers";
+                if (selectedDb.equals("msql")) {
+                    datedif = "datediff";
+                }  
+                 
+                Predicate p = criteriaBuilder.conjunction();
+   				User mst = getMaster();
+   				p = criteriaBuilder.equal(root.get("master"), mst);
+   				p=criteriaBuilder.and(criteriaBuilder.greaterThan(criteriaBuilder.function(datedif, Integer.class,
+                        criteriaBuilder.literal(new Date()), root.get("creation_date")), 3));
+   				p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                        criteriaBuilder.literal(new Date()), root.get("creation_date")), 7));
+                   User user = connectedUser();
+                   if (user.getMaster() != null) {
+                       List<Groupe> groups = groupRepo.findGroupeByUsersUserId(user.getUserId());
+                       List<Long> acces = new ArrayList<Long>();
+                       for (Groupe groupe : groups) {
+
+                           List<PermissionGroupN> permissionGroups = pgnr.findByGroup(groupe);
+                           for (PermissionGroupN pd : permissionGroups) {
+
+                               for (PermissionNatureCourrier pdt : pd.getPermissionCourrier().getPermissionNature()) {
+
+                                   if (pdt.getPermissionCourrier().getAcces().equals("R")
+                                           || pdt.getPermissionCourrier().getAcces().equals("RWD")
+                                           || pdt.getPermissionCourrier().getAcces().equals("RW")
+
+                                                   && connectedUser().getMaster() != null) {
+                                       acces.add(pdt.getNature().getId());
+                                   }
+                               }
+                           }
+
+                       }
+                       p=criteriaBuilder.and(criteriaBuilder.lessThanOrEqualTo(criteriaBuilder.function(datedif, Integer.class,
+                           criteriaBuilder.literal(new Date()), root.get("creation_date")), 1));
+
+                   }
+             
+                  p= criteriaBuilder.and(criteriaBuilder.equal(root.get("type").get("premierNiveau"), 1));
+                   return p;
+            }
+        }, pageable);
+    }
+
+    // public Page<FoldersRelations> getFolderChilds(UUID parentFolderId, Pageable
+    // pageable)
+    // {
+    // //.println("heeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeere1");
+    // return folderRelationsRepo.findAll(new Specification<FoldersRelations>() {
+
+    // @Override
+    // public Predicate toPredicate(Root<FoldersRelations> root, CriteriaQuery<?>
+    // query, CriteriaBuilder criteriaBuilder) {
+    // Predicate p = criteriaBuilder.conjunction();
+    // // p = criteriaBuilder.equal(root.get("master"), getMaster());
+    // p=criteriaBuilder.equal(root.get("parent").get("id"),parentFolderId);
+    // User user = connectedUser();
+    // if (user.getMaster() != null) {
+    // List<Groupe> groups = connectedUser().getGroups();
+    // List<Long> acces = new ArrayList<Long>();
+    // for (Groupe groupe : groups) {
+
+    // List<PermissionGroupN> permissionGroups = pgnr.findByGroup(groupe);
+    // for (PermissionGroupN pd : permissionGroups) {
+
+    // for (PermissionNatureCourrier pdt :
+    // pd.getPermissionCourrier().getPermissionNature()) {
+
+    // if (pdt.getPermissionCourrier().getAcces().equals("R")
+    // || pdt.getPermissionCourrier().getAcces().equals("RWD")
+    // || pdt.getPermissionCourrier().getAcces().equals("RW")
+
+    // && connectedUser().getMaster() != null) {
+    // //.println(pdt.getNature().getId());
+    // acces.add(pdt.getNature().getId());
+    // }
+    // }
+    // }
+
+    // p = criteriaBuilder.and(p,
+    // criteriaBuilder.in(root.get("child").get("nature").get("id")).value(acces));
+    // }
+    // }
+
+    // return p;
+    // }},pageable);
+
+    // }
+
+    // find folder childs by parent id
+
+    public Page<Folder> getFolderChilds(UUID parentFolderId, Pageable pageable) {
+        List<Folder> dsend = new ArrayList<Folder>();
+        List<Folder> lst = new ArrayList<Folder>();
+
+        Folder folderReturn = folderRepository.findById(parentFolderId).orElse(null);
+        lst = folderRepository.findFoldersChilds(parentFolderId);
+        if (ur.getOne(connectedUserMaster(connectedUser().getUserId())).getSecLevel() >= 2) {
+            Journal j = new Journal();
+
+            j.setUser(connectedUser());
+            j.setDate(new Date());
+            j.setTypeEv("Utilisateur/Consultation");
+            j.setComposante("Courrier");
+            String h="";
+				if(Objects.nonNull(folderReturn.getNature())){
+				h=" | Nature :" + folderReturn.getNature().getName();
+				}
+            j.setAction("Référence : " + folderReturn.getReference() + " | Date : " + folderReturn.getDate()
+                    + " | Type :" + folderReturn.getType().getName() + " | Destinataire : " + folderReturn.getReceiver()
+                  +h+ " | Objet : " + folderReturn.getObjet());
+            j.setMode("C");
+            j.setMaster(ur.getOne(connectedUserMaster(connectedUser().getUserId())));
+
+            jr.save(j);
+        }
+        User user = connectedUser();
+
+        // List<Groupe> groups = groupRepo.findGroupeByUsersUserId(user.getUserId());
+        // if (user.getMaster() == null) {
+        int start = (int) pageable.getOffset();
+        int end = (int) (start + pageable.getPageSize()) > lst.size() ? lst.size() : (start + pageable.getPageSize());
+        Page<Folder> pages = new PageImpl<Folder>(lst.subList(start, end), pageable, lst.size());
+        return pages;
+        // }
+        // List<Nature> natures = new ArrayList<Nature>();
+        // for (Groupe groupe : groups) {
+
+        // List<PermissionGroupN> permissionGroups = pgnr.findByGroup(groupe);
+
+        // for (PermissionGroupN pd : permissionGroups) {
+
+        // for (PermissionNatureCourrier pdt :
+        // pd.getPermissionCourrier().getPermissionNature()) {
+        // natures.add(pdt.getNature());
+
+        // }
+        // }
+
+        // }
+
+        // for (Folder folder : lst) {
+        // for (Nature nt : natures) {
+        // if (nt.getId() == folder.getNature().getId()) {
+        // dsend.add(folder);
+        // }
+
+        // }
+        // }
+
+        // int start = (int) pageable.getOffset();
+        // int end = (int) (start + pageable.getPageSize()) > dsend.size() ?
+        // dsend.size()
+        // : (start + pageable.getPageSize());
+        // // Class<?> c = Class.forName("PerformanceInvokeService");
+
+        // Page<Folder> pages = new PageImpl<Folder>(dsend.subList(start, end),
+        // pageable, dsend.size());
+        // return pages;
+
+    }
+
+    // public Long Countfolder() {
+    // User user = new User();
+    // user.setUserId(connectedUserMaster(connectedUser().getUserId()));
+    // return folderRepository.CountRecent(user);
+    // }
+    public List<Page<Folder>> getRecentFolder(Pageable pageable) {
+        List<Page<Folder>> lst = new ArrayList<Page<Folder>>();
+    	System.out.println("bda hna");
+        lst.add(getLastWeekFolders(pageable));
+        lst.add(getLastMonthFolders(pageable));
+        lst.add(getOLDFolders(pageable));
+        return lst;
+    }
+
+    public Page<Folder> getFoldersbyDoc(String id, Pageable pageable) {
+
+        // List<Folder> folders = new ArrayList<Folder>();
+        // List<DocumentFolder> documentFolders = documentFolderRepo.findFoldersLink(id);
+        
+        // for (DocumentFolder df : documentFolders) {
+
+        //     folders.add(df.getFolder());
+        // }
+        // int start = (int) pageable.getOffset();
+        // int end = (int) (start + pageable.getPageSize()) > folders.size() ? folders.size()
+        //         : (start + pageable.getPageSize());
+        // Page<Folder> pages = new PageImpl<Folder>(folders.subList(start, end), pageable, folders.size());
+
+        // return pages;
+                return folderRepository.findByDocumentsDocumentId(UUID.fromString(id),pageable);
+    }
+
+    public void deleteFolderFolderLinks(UUID parent, List<UUID> childs) {
+
+        for (UUID child : childs) {
+
+            // FoldersRelations fd=folderRelationsRepo.del.findById(id)
+            folderRelationsRepo.deleteById((new FoldersRelationsPk(parent, child)));
+        }
+
+    }
+
+    public FolderType findTypeById(Long id) {
+        return ftr.findById(id).orElse(null);
+    }
+
+}
